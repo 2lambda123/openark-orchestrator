@@ -1,5 +1,16 @@
 # CI tests
 
+## Running CI Tests Locally
+
+To run the CI tests locally or on a development machine, follow these steps:
+- Ensure that Go is installed on your machine
+- Run the following commands:
+  ```
+  gofmt -s -w .
+  go build
+  go test
+  ```
+
 `orchestrator` uses [GitHub Actions](https://help.github.com/en/actions) to run the following CI tests:
 
 - Build (main): build, unit tests, integration tests, docs tests
@@ -11,7 +22,10 @@
 Running on pull requests, the [main CI](https://github.com/openark/orchestrator/blob/master/.github/workflows/main.yml) job validates the following:
 
 - Validate source code is formatted using `gofmt`
-- Build passes
+- Build passes: run `gofmt` and `go build`
+- Unit tests pass: run `go test`
+- Integration tests pass: run `go test` with `SQLite` and `MySQL` backends
+- Documentation tests pass: ensure pages and links are not orphaned.
 - Unit tests pass
 - Integration tests pass
   - Using `SQLite` backend

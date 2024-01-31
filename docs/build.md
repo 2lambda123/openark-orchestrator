@@ -34,6 +34,10 @@ Requirements: a docker installation.
 
 Requirements:
 
+## Building and testing via GitHub CI
+
+`orchestrator` provides a convenient way to build and test the orchestrator using GitHub CI. This method allows developers to build and test orchestrator without setting up a development environment on their own computer.
+
 - `go` development setup (at this time `go1.12` or above required)
 - `git`
 - `gcc` (required to build `SQLite` as part of the `orchestrator` binary)

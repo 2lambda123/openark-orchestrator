@@ -14,6 +14,7 @@ mysql-9002.dc1.domain.net:3306,oltp2
 mysql-3972.dc1.domain.net:3306,oltp3
 mysql-0019.dc1.domain.net:3306,oltp4
 ```
+
 ### Show only aliases
 
 ```shell
@@ -265,6 +266,7 @@ mysql-ecec.dc2.domain.net
 ```
 
 #### Show the master host for each member in the cluster:
+
 ```shell
 $ orchestrator-client -c api -path cluster/alias/mycluster | jq .[].MasterKey.Hostname -r
 
